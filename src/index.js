@@ -2,14 +2,22 @@ import Notiflix from 'notiflix';
 import SlimSelect from 'slim-select';
 import { fetchBreeds, fetchCatByBreed } from './js/cat-api';
 
+const SlimSelectEl = document.getElementById('selectElement');
 const selectEl = document.querySelector('.breed-select');
 const loaderEl = document.querySelector('.loader');
 const infoEl = document.querySelector('.cat-info');
 const errorEl = document.querySelector('.error');
 
+// function createSlimSelect() {
+//   return new SlimSelect({
+//     select: SlimSelectEl,
+//   });
+// }
 new SlimSelect({
-  select: '#single',
+  select: SlimSelectEl,
 });
+// createSlimSelect();
+infoEl.style.width = '600px';
 
 fetchBreeds()
   .then(data => {
