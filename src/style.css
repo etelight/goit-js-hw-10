@@ -23,3 +23,12 @@
     width: 100%;
   }
 }
+.cat-img {
+  width: 460px;
+}
+.cat-info {
+  display: flex;
+}
+.cat-text {
+  display: block;
+}

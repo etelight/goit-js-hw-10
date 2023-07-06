@@ -17,7 +17,7 @@ new SlimSelect({
   select: SlimSelectEl,
 });
 // createSlimSelect();
-infoEl.style.width = '600px';
+// infoEl.style.width = '600px';
 
 fetchBreeds()
   .then(data => {
@@ -42,7 +42,7 @@ selectEl.addEventListener('change', () => {
   infoEl.style.cssText = '';
   fetchCatByBreed(selectedBreedId)
     .then(data => {
-      infoEl.innerHTML = `<img src="${data.url}" width="100%"><div style="padding: 15px; padding-top: 0;"><h1>${data.breeds[0].name}</h1><p>${data.breeds[0].description}</p><b>Temperament: </b><span> ${data.breeds[0].temperament}</span></div>`;
+      infoEl.innerHTML = `<img src="${data.url}" width="100%" class="cat-img"><div style="padding: 15px; padding-top: 0;" class="cat-text"><h1>${data.breeds[0].name}</h1><p>${data.breeds[0].description}</p><b>Temperament: </b><span> ${data.breeds[0].temperament}</span></div>`;
       loaderEl.style.opacity = '0';
     })
     .catch(error => {
