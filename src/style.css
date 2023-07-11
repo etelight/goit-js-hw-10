@@ -32,3 +32,6 @@
 .cat-text {
   display: block;
 }
+.breed-select {
+  width: 460px;
+}
